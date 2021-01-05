@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
 
 header{
-    height: 49px;
+    height: 60px;
     background-color: black;
 }
 header p{
@@ -15,6 +15,7 @@ header p{
 .topnav {
   overflow: hidden;
   background-color: #e9e9e9;
+  height:60px;
 }
 
 .topnav a {
@@ -22,9 +23,10 @@ header p{
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
   text-decoration: none;
   font-size: 17px;
+  
 }
 
 .topnav a:hover {
@@ -49,9 +51,58 @@ header p{
 body{
     font-family: 'Jura', sans-serif;
     background-image: url("https://wallpaperaccess.com/full/1761712.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
+}
+.search-box{
+  position: absolute;
+  flex-wrap: nowrap;
+  top:13%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #7f8fa6;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  display: flex;
+}
+.search-btn{
+  color:#00a8ff;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #7f8fa6;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.4s;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(184, 184, 184);
+}
+.search-box:hover >.search-txt{
+  width:240px;
+  padding: 0 6px;
+}
+
+.search-box:hover >.search-btn{
+  background:white;
+}
+
+.search-txt{
+  border:none;
+  background:none;
+  outline:none;
+  float: left;
+  padding: 0;
+  color:rgb(255, 255, 255);
+  font-size: 16px;
+  transition:0.4s;
+  line-height: 40px;
+  width:0px;
 }
 .page{
     color: white;
@@ -65,9 +116,9 @@ body{
 .anime-card{
     border-radius: 30px; 
     background-color: rgba(0, 0, 0, 0.603);
-    padding: 25px;
-    width: 350px;
-    margin: 50px auto;
+    padding: 40px;
+    width: 450px;
+    margin: 150px auto 50px auto;
     text-align: center;
 }
 .anime-card img{
@@ -84,7 +135,10 @@ footer{
     background-color: black;
     padding: 5px 5px
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 560px) {
+  .topnav{
+    height:145px;
+  }
   .topnav a, .topnav input[type=text] {
     float: none;
     display: block;
@@ -92,9 +146,21 @@ footer{
     width: 100%;
     margin: 0;
     padding: 14px;
+    
   }
   
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+
+  .search-box{
+    top: 20%;
+    left: 50%;
+  }
+  
+  .anime-card{
+    margin-top: 200px;
+    margin-bottom: 50px;
+  }
+  
 }

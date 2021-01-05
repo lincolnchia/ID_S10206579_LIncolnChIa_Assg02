@@ -2,6 +2,19 @@ page = 0
 
 animeList(page);
 
+document.getElementById('nextpage').addEventListener('click', function(){
+    $("#mainpage").empty()
+    page+=1
+    animeList(page);
+})
+document.getElementById('previouspage').addEventListener('click', function(){
+    $("#mainpage").empty()
+    page-=1
+    animeList(page);
+})
+
+const data = document.getElementsByClassName('input-txt').value
+
 function animeList(page){
     fetch("https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]="+5*page)
     .then(res=>res.json())
@@ -14,7 +27,7 @@ function animeList(page){
         function createDiv(anime){
             // variables needed for div
             let anime_id = anime["id"]
-            let en_title = anime["attributes"]['titles']['en']
+            let en_title = anime["attributes"]['canonicalTitle']
             let jp_title = anime["attributes"]['titles']['ja_jp']
             let age_rating = anime["attributes"]["ageRating"]
             let age_Rguide = anime["attributes"]["ageRatingGuide"]
