@@ -11,28 +11,31 @@
 </head>
 
 <header>
-  <div class="topnav">
-    <a class="active" href="#AnimeFinder">AnimeFinder</a>
-    <a href="#about">Anime</a>
-    <a href="#contact">Manga</a>
-    
-  </div>
+    <ul>
+      <li><a href="#">AnimeFinder</a></li>
+      <li><a href="#">Anime</a></li>
+      <li><a href="#">Manga</a></li>
+      <li><a href="#">Categories</a></li>
+    </ul>
 </header>
 
 <body>
   <div class="search-box">
-    <input class="search-txt" type="text" name="" placeholder="Type to search">
-    <a class="search-btn" href="#">
+    <input id="search-txt" class="search-txt" type="text" name="" placeholder="Type to search">
+    <a id="search-btn"class="search-btn" href="#">
     <i class="fas fa-search"></i>
     </a>  
   </div>
 <div class="page" id="mainpage"></div>
-<input type="button" value="preivouspage" placeholder="Next" id="preivouspage">
-<input type="button" value="nextpage"  placeholder="From" id="nextpage">
+<div class="button-container">
+  <input class="previous-button" type="button" value="<" placeholder="Next" id="preivouspage">
+  <input class="next-button" type="button" value=">"  placeholder="From" id="nextpage">
+</div>
+<div class="pagination" id="pagination"></div>
 <script src="ID_Assignment 2.js"></script>
 </body>
 
 <footer>
-  <p>AnimeFinder</p>
+  <p>©AnimeFinder</p>
 </footer>
 </html>

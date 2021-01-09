@@ -7,13 +7,31 @@ document.getElementById('nextpage').addEventListener('click', function(){
     page+=1
     animeList(page);
 })
-document.getElementById('previouspage').addEventListener('click', function(){
-    $("#mainpage").empty()
-    page-=1
-    animeList(page);
+
+document.getElementById('preivouspage').addEventListener('click', function(){
+    if (page > 0){
+        $("#mainpage").empty()
+        page-=1
+        animeList(page);
+    }
+    else{
+        $("#mainpage").empty()
+        animeList(page);
+    }
 })
 
-const data = document.getElementsByClassName('input-txt').value
+document.getElementById('search-btn').addEventListener('click', function(){
+    const searchdata = document.getElementById('search-txt').value
+    if(searchdata == "")
+        console.log("none")
+    
+    else
+    FindAnime(searchdata)
+})
+
+function FindAnime(searchdata){
+    
+}
 
 function animeList(page){
     fetch("https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]="+5*page)
