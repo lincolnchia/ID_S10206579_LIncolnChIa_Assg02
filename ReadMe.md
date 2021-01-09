@@ -9,7 +9,11 @@
 ## -There is a search bar to allow users to search for their desired anime
 ## -buttons at the bottom to allow the useers to scroll through the pages
 
-# 2.Technology Used
+# 2.Features to be
+
+## - create a favourite page to store users intrested manga
+## - create a page where users can choose what genere they like to search for
+# 3.Technology Used
 ## -Jquery
 ## -javascript
 ## -css
@@ -18,12 +22,12 @@
 ## -Adobe XD
 ## -British Palate(colour schemes)
 
-# 3.Testing
+# 4.Testing
 ## -Postman 
 
-# 4.Git hub link 
+# 5.Git hub link 
 ## -https://lincolnchia.github.io/ID_S10206579_LIncolnChIa_Assg02/
  
-# 5.Credits
+# 6.Credits
 ## -Menu hover underline :https://codepen.io/alphardex/pen/MWWEmLK
 ## -Kitsu Api:https://kitsu.docs.apiary.io/
