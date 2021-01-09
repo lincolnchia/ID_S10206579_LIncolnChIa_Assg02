@@ -52,10 +52,12 @@ function animeList(page){
             let coverImageLink = anime["attributes"]["posterImage"]["original"]
             let air_date = anime["attributes"]["startDate"]
             let status = anime["attributes"]["status"]
+            let slug = anime["attributes"]["slug"]
 
             // creating div
             animeDiv = document.createElement('div');
             animeDiv.classList.add('anime-card')
+            animeDiv.id = 'animeId';
             animeDiv.innerHTML = "\
             <h3>"+anime_id+"</h3>\
             <h1>"+en_title+"</h1>\
@@ -68,5 +70,20 @@ function animeList(page){
             ";
             $(".page").append(animeDiv);
         }
+        
     })    
 }
+
+function AnimeLink(animeDiv){
+    fetch("https://kitsu.io/api/edge/anime?page[limit]=5&page[offset]="+5*page)
+    .then(res=>res.json())
+    .then(data=>{
+        for (i=0;i<data["data"].length;i++){
+            console.log(data["data"][i]);
+            console.log("in loop: "+i)
+            createDiv(data["data"][i])
+        }
+    })
+    if (slug )
+}
+           
